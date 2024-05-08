@@ -21,7 +21,8 @@ public class Bug
             .Ignore(Trigger.Assign);
 
         sm.Configure(State.Closed)
-            .Permit(Trigger.Reopen, State.Reopened);
+            .Permit(Trigger.Reopen, State.Open)
+            .Ignore(Trigger.Assign);
 
         sm.Configure(State.Deferred)
             .Permit(Trigger.Assign, State.Assigned)

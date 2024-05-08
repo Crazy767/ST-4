@@ -79,7 +79,7 @@ namespace BugTests
         [TestMethod]
         public void Bug_CanCloseFromDeferred()
         {
-            var bug = new Bug(Bug.State.Deferred); // Исправлено с "Deferred" на "Defered"
+            var bug = new Bug(Bug.State.Deferred);
             bug.Close();
             Assert.AreEqual(Bug.State.Closed, bug.getState());
         }
@@ -87,7 +87,7 @@ namespace BugTests
         [TestMethod]
         public void Bug_CanAssignFromDeferred()
         {
-            var bug = new Bug(Bug.State.Deferred); // Исправлено с "Deferred" на "Defered"
+            var bug = new Bug(Bug.State.Deferred);
             bug.Assign();
             Assert.AreEqual(Bug.State.Assigned, bug.getState());
         }
